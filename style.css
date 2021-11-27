@@ -165,7 +165,7 @@ h1{
     -webkit-animation: cervical 3000ms ease-in-out infinite alternate-reverse;}
 @keyframes cervical {
     0%    { transform: translateX(0px);} 
-    100%   {transform: translateX(-4%) translateY(-3px);}}
+    100%   {transform: translate(-4%, -3%)}}
 
 .upperThoracic{
     position: relative;
@@ -189,7 +189,7 @@ h1{
     -webkit-animation: lumbar 3000ms 350ms ease-in-out infinite alternate;}
 @keyframes lumbar {
     0%    { transform: translate(0);}  
-    100%    {transform: translateX(-7%) translateY(3%);}}
+    100%    {transform: translate(-7%, 3%)}}
 .lowerLumbar{
     position: relative;
     animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;

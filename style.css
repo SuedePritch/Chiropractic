@@ -165,14 +165,16 @@ h1{
     -webkit-animation: cervical 3000ms ease-in-out infinite alternate-reverse;}
 @keyframes cervical {
     0%    { transform: translateX(0px);} 
-    100%   {transform: translateX(-4%) translateY(-3px)}}
+    100%   {transform: translateX(-4%) translateY(-3px);}}
+
 .upperThoracic{
     position: relative;
     animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;
     -webkit-animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;}
 @keyframes upperThoracic {
     0%    { transform: translate(0);} 
-    100%    { transform: translateX(-5%)}}
+    100%    { transform: translateX(-5%);}}
+
 .thoracic{
     position: relative;
     animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;
@@ -180,24 +182,25 @@ h1{
 @keyframes thoracic {
     0%    { transform: translateX(0px);} 
     100%   {transform: translateX(-5%);}}
+
 .lumbar{
     position: relative;
     animation: lumbar 3000ms 350ms ease-in-out infinite alternate;
     -webkit-animation: lumbar 3000ms 350ms ease-in-out infinite alternate;}
 @keyframes lumbar {
-    0%    { transform: translate(0)}  
+    0%    { transform: translate(0);}  
     100%    {transform: translateX(-7%) translateY(3%);}}
 .lowerLumbar{
     position: relative;
     animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;
     -webkit-animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;}
 @keyframes lowerLumbar {
-    0%    { transform: translateX(0)} 
-    100%    { transform: translateX(-7%)}  }
+    0%    { transform: translateX(0);} 
+    100%    { transform: translateX(-7%);}  }
 .sacrum{
     position: relative;
     animation: sacrum 3000ms  450ms ease-in-out infinite alternate-reverse;   
     -webkit-animation: sacrum 3000ms  450ms ease-in-out infinite alternate-reverse;} 
 @keyframes sacrum {
     0%    { transform: translateX(-3px);} 
-    100%   {transform: translateX(3px)}}
+    100%   {transform: translateX(3px);}}

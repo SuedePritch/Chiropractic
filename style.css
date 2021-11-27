@@ -1,0 +1,199 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+
+
+
+
+
+
+.logo{
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top:0;
+    background: white;
+    padding: 0.1rem;
+}
+.superior{
+    display: flex;
+    align-items: center;
+    color: #492168;
+    }
+.chiropractic{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding:0;
+    color: #CBADD3;
+    }
+h1{ 
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-weight: 800;
+    
+}
+
+
+
+
+
+
+
+
+.main{
+    position: relative;
+    display: flex;
+    padding:25px;
+    height:100vh;
+    width: 100vw;
+    background: #492168;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    border:1px solid black;
+    background: white;
+    width:20vw;
+    height: 10vh;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right:2px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom:0;
+    padding-bottom:1rem;
+    font-size: 0.8rem;
+    width: 100vw;
+    height:15vh;
+    background: white;
+
+}
+.address{
+    text-decoration: none;
+}
+.phone{
+    line-height: 1.2rem;
+}
+
+
+
+
+
+
+
+@media all and (max-width: 650px) {
+    .container{
+        height:100vh;
+        scroll-snap-type: y mandatory;
+    }
+    .page{
+        scroll-snap-align: start;
+    }
+
+    .logo{
+        flex-direction: column;
+        height:100vh;
+    }
+    svg{
+        width: 100vw;
+        height:90vh;
+    }
+    .title{
+        position: fixed;
+        width:100vw;
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5rem;
+        font-size: 1.125rem;
+    }
+    .main{
+        padding:0;
+        flex-direction: column;
+        height:100vh;
+    }
+    .nav{
+        display: flex;
+        justify-content: center;
+        width:90vw;
+        margin-top:10px;
+        margin-left: 5vw;
+        margin-right:5vw;
+        box-shadow:8px 6px 8px #CBADD3;
+    }
+    .footer{
+        height:15vh;
+        font-size: 0.9rem;
+        padding-top: 0.1rem;
+        padding-bottom:0.1rem;
+    }
+
+}
+
+
+
+
+.cervical{
+    position: relative;
+    animation: cervical 3000ms ease-in-out infinite alternate-reverse;}
+@keyframes cervical {
+    0%    { transform: translateX(0px);} 
+    100%   {transform: translateX(-4%) translateY(-3px)}}
+.upperThoracic{
+    position: relative;
+    animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;    }
+@keyframes upperThoracic {
+    0%    { transform: translate(0);} 
+    100%    { transform: translateX(-5%)}  }
+.thoracic{
+    position: relative;
+
+    animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;   }
+@keyframes thoracic {
+    0%    { transform: translateX(0px);} 
+    100%   {transform: translateX(-5%);}}
+.lumbar{
+    position: relative;
+    animation: lumbar 3000ms 350ms ease-in-out infinite alternate;}
+@keyframes lumbar {
+    0%    { transform: translate(0)}  
+    100%    { 
+        transform: translateX(-7%) translateY(3%);} }
+.lowerLumbar{
+    position: relative;
+    animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;}
+@keyframes lowerLumbar {
+    0%    { transform: translateX(0)} 
+    100%    { transform: translateX(-7%)}  }
+.sacrum{
+    position: relative;
+    animation: sacrum 3000ms  450ms ease-in-out infinite alternate-reverse;   }
+@keyframes sacrum {
+    0%    { transform: translateX(-3px);} 
+    100%   {transform: translateX(3px)}}

@@ -172,7 +172,7 @@ h1{
     animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;
     -webkit-animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;}
 @keyframes upperThoracic {
-    0%    { transform: translate(0);} 
+    0%    { transform: translateX(0);} 
     100%    { transform: translateX(-5%);}}
 
 .thoracic{

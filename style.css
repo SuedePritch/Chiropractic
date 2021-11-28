@@ -10,13 +10,11 @@
 
 
 
-
-
-
 .logo{
     margin:0;
     padding:0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 .title{
@@ -25,19 +23,19 @@
     justify-content: center;
     top:0;
     background: white;
-    padding: 0.1rem;
+    width: 100vw;
 }
 .superior{
     display: flex;
     align-items: center;
-    color: #492168;
+    color: rgb(50, 0, 125);
     }
 .chiropractic{
     display: flex;
     align-items: center;
     position: relative;
     padding:0;
-    color: #CBADD3;
+    color: rgb(200, 0, 200);
     }
 h1{ 
     font-family: 'M PLUS 1 Code', sans-serif;
@@ -52,30 +50,56 @@ h1{
 
 
 
+
+
+
 .main{
     position: relative;
     display: flex;
+    flex-direction: column;
+    text-align: center;
     padding:25px;
     height:100vh;
     width: 100vw;
-    background: #492168;
 }
 
 .nav{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    background:linear-gradient(rgb(255,0,175,0.6), rgb(125,0,175,0.8));
+    box-shadow:5px 5px 15px rgb(50,0,125);
+    padding:1.5rem;
+    margin:1rem;
+
+    color:black;
+    font-size: 1.6rem;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.6rem;
+    width:50vw;
+    overflow: hidden;
+    border-radius: 200px;
+}
+.serviceList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.serviceList > *{
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-    border:1px solid black;
-    background: white;
-    width:20vw;
-    height: 10vh;
-    margin-top: 5px;
-    margin-left: 2px;
-    margin-right:2px;
-    border-radius: 20px;
+    border-radius: 1000px;
+    box-shadow:10px 10px 15px rgb(50,0,125);
+    padding:1rem;
+    margin:1rem;
+    color:black;
+    font-size: 1.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    width:40vw;
 }
-
 
 
 
@@ -127,7 +151,6 @@ h1{
     }
     .title{
         position: fixed;
-        width:100vw;
         display: flex;
         justify-content: center;
         padding-top: 0.5rem;
@@ -136,13 +159,17 @@ h1{
     .main{
         padding:0;
         flex-direction: column;
+        justify-content: center;
         height:100vh;
     }
     .nav{
+        position: absolute;
+        top:80px;
         display: flex;
         justify-content: center;
         width:90vw;
         margin-top:10px;
+        margin-bottom:10px;
         margin-left: 5vw;
         margin-right:5vw;
         box-shadow:8px 6px 8px #CBADD3;
@@ -172,16 +199,16 @@ h1{
     animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;
     -webkit-animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;}
 @keyframes upperThoracic {
-    0%    { transform: translateX(0);} 
-    100%    { transform: translateX(-5%);}}
+    0%    { transform: translate(0);} 
+    100%    { transform: translate(-5%, -2%);}}
 
 .thoracic{
     position: relative;
     animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;
     -webkit-animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;}
 @keyframes thoracic {
-    0%    { transform: translateX(0px);} 
-    100%   {transform: translateX(-5%);}}
+    0%    { transform: translate(0px);} 
+    100%   {transform: translate(-5%, -1%);}}
 
 .lumbar{
     position: relative;

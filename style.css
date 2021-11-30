@@ -9,10 +9,10 @@
 
 
 
-
 .logo{
     margin:0;
     padding:0;
+    max-height: 350px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -20,7 +20,6 @@
 .title{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     top:0;
     background: white;
     width: 100vw;
@@ -47,18 +46,13 @@ h1{
 
 
 
-
-
-
-
-
-
 .main{
     position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding:25px;
+    margin:auto;
     height:100vh;
     width: 100vw;
 }
@@ -66,27 +60,30 @@ h1{
 .nav{
     position: relative;
     display: flex;
-    box-sizing: border-box;
-    align-items: center;
+    justify-content: center;
+    padding:1rem;
+    margin:1rem;
+
     background:linear-gradient(rgb(255,0,175,0.6), rgb(125,0,175,0.8));
     box-shadow:5px 5px 15px rgb(50,0,125);
-    padding:1.5rem;
-    margin:1rem;
 
     color:black;
     font-size: 1.6rem;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: 700;
     letter-spacing: 0.6rem;
-    width:50vw;
+
+    width:40vw;
     overflow: hidden;
     border-radius: 200px;
 }
+
 .serviceList{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 .serviceList > *{
     display: flex;
     justify-content: center;
@@ -144,6 +141,7 @@ h1{
     .logo{
         flex-direction: column;
         height:100vh;
+        max-height: 1000px;
     }
     svg{
         width: 100vw;

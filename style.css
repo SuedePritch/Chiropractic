@@ -1,3 +1,38 @@
+:root{
+    /* Light Mode Colours*/
+    --colour-main-light:hsla(308, 100%, 39%, 0.6);
+    --colour-accent-light:hsla(264, 100%, 25%, 1);
+    --colour-background-light:hsl(0, 0%, 100%);
+    --colour-text-light:hsl(0, 0%, 0%);
+    --colour-text-accent-light:hsl(0,0%,100%);
+    /* Dark Mode Colours*/
+    --colour-main-dark:hsla(308, 100%, 39%, 1);
+    --colour-accent-dark:hsla(264, 100%, 95%, 1);
+    --colour-background-dark:hsla(264, 100%, 10%, 1);
+    --colour-text-dark:hsl(0, 0%, 100%);
+    --colour-text-accent-dark:hsl(0, 0%, 0%);
+}
+
+@media(prefers-color-scheme: dark){
+    :root {
+        --colour-main:var(--colour-main-dark);
+        --colour-accent:var(--colour-accent-dark);
+        --colour-background:var(--colour-background-dark);
+        --colour-text:var(--colour-text-dark);
+        --colour-text-accent:var(--colour-text-accent-dark)
+    }   
+}
+@media(prefers-color-scheme: light){
+    :root {
+        --colour-main:var(--colour-main-light);
+        --colour-accent:var(--colour-accent-light);
+        --colour-background:var(--colour-background-light);
+        --colour-text:var(--colour-text-light);
+        --colour-text-accent:var(--colour-text-accent-light)
+
+    }   
+}
+
 *{
     margin:0;
     padding:0;
@@ -8,8 +43,6 @@
 }
 
 
-
-
 .logo{
     margin:0;
     padding:0;
@@ -17,31 +50,36 @@
     max-height: 350px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    background: var(--colour-background);
 }
 .title{
     display: flex;
     flex-direction: row;
     top:0;
-    background: white;
     width: 100vw;
+    z-index: 2;
 }
 .superior{
     display: flex;
     align-items: center;
-    color: rgb(50, 0, 125);
+    color: var(--colour-accent);
     }
 .chiropractic{
     display: flex;
     align-items: center;
     position: relative;
     padding:0;
-    color: rgb(200, 0, 200);
+    color: var(--colour-main);
     }
 h1{ 
     font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: 800;
     
+}
+
+
+.page{
+    background: var(--colour-background);
 }
 
 
@@ -71,10 +109,10 @@ h1{
     padding:1rem;
     margin:1rem;
 
-    background:linear-gradient(rgb(255,0,175,0.6), rgb(125,0,175,0.8));
-    box-shadow:5px 5px 15px rgb(50,0,125);
+    background:var(--colour-accent);
+    box-shadow:5px 5px 15px var(--colour-accent-light);
 
-    color:black;
+    color:var(--colour-text-accent);
     font-size: 1.6rem;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: 700;
@@ -85,21 +123,21 @@ h1{
 }
 .serviceList{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 .serviceList > *{
     display: flex;
     justify-content: center;
     border-radius: 1000px;
-    box-shadow:10px 10px 15px rgb(50,0,125);
-    padding:1rem;
+    box-shadow:10px 10px 15px var(--colour-accent);
+    padding:1.5rem;
     margin:1rem;
-    color:black;
+    color:var(--colour-text);
     font-size: 1.3rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 700;
-    width:40vw;
+    width:90vw;
 }
 
 
@@ -117,13 +155,17 @@ h1{
     font-size: 0.8rem;
     width: 100vw;
     height:15vh;
-    background: white;
+    background: var(--colour-background);
 
 }
 .address{
+
+    color:var(--colour-text);
     text-decoration: none;
 }
-.phone{
+.phone a{
+    color:var(--colour-text);
+    text-decoration: none;
     line-height: 1.2rem;
 }
 
@@ -133,7 +175,7 @@ h1{
 
 
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 1650px) {
     .container{
         height:100vh;
         scroll-snap-type: y mandatory;
@@ -156,7 +198,7 @@ h1{
         display: flex;
         justify-content: center;
         padding-top: 0.5rem;
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
     .main{
         padding:0;
@@ -186,6 +228,30 @@ h1{
 }
 
 
+/* SVG Logo styles */
+
+/*Spine color*/
+.cervical,
+.filled1,
+.thoracic,
+.center,
+.filled2,
+.lumbar,
+.sacrum{
+    fill:var(--colour-main);
+}
+/* Border Circle */
+.outline-out{
+    fill:var(--colour-accent);
+}
+/* Padding and Inner background*/
+.outline-in,
+.whitespace1,
+.whitespace2{
+    fill:var(--colour-background);
+}
+
+
 
 
 .cervical{
@@ -201,7 +267,7 @@ h1{
     animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;
     -webkit-animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;}
 @keyframes upperThoracic {
-    0%    { transform: translate(0);} 
+    0%    { transform: translateX(0);} 
     100%    { transform: translate(-5%, -2%);}}
 
 .thoracic{
@@ -211,6 +277,15 @@ h1{
 @keyframes thoracic {
     0%    { transform: translate(0px);} 
     100%   {transform: translate(-5%, -1%);}}
+.center{
+    position: relative;
+    animation: center 3000ms 300ms ease-in-out infinite alternate-reverse;
+    -webkit-animation: center 3000ms 300ms ease-in-out infinite alternate-reverse;}
+@keyframes center {
+    0%    { transform: translate(0px);} 
+    100%   {transform: translate(1%, -1%);}}
+
+    
 
 .lumbar{
     position: relative;

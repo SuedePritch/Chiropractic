@@ -5,6 +5,7 @@
     --colour-background-light:hsl(0, 0%, 100%);
     --colour-text-light:hsl(0, 0%, 0%);
     --colour-text-accent-light:hsl(0,0%,100%);
+    
     /* Dark Mode Colours*/
     --colour-main-dark:hsla(308, 100%, 39%, 1);
     --colour-accent-dark:hsla(264, 100%, 95%, 1);
@@ -58,6 +59,7 @@
     top:0;
     width: 100vw;
     z-index: 2;
+    font-size: 1.4rem;
 }
 .superior{
     display: flex;
@@ -175,7 +177,7 @@ h1{
 
 
 
-@media all and (max-width: 1650px) {
+@media all and (max-width: 850px) {
     .container{
         height:100vh;
         scroll-snap-type: y mandatory;
@@ -198,7 +200,7 @@ h1{
         display: flex;
         justify-content: center;
         padding-top: 0.5rem;
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
     .main{
         padding:0;
@@ -267,7 +269,7 @@ h1{
     animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;
     -webkit-animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;}
 @keyframes upperThoracic {
-    0%    { transform: translateX(0);} 
+    0%    { transform: translate(0);} 
     100%    { transform: translate(-5%, -2%);}}
 
 .thoracic{

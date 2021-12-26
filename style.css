@@ -1,15 +1,15 @@
 :root{
     /* Light Mode Colours*/
     --colour-main-light:hsla(308, 100%, 39%, 0.6);
-    --colour-accent-light:hsla(264, 100%, 25%, 1);
+    --colour-accent-light:hsla(264, 100%, 25%, 0.95);
     --colour-background-light:hsl(0, 0%, 100%);
     --colour-text-light:hsl(0, 0%, 0%);
     --colour-text-accent-light:hsl(0,0%,100%);
-    
+
     /* Dark Mode Colours*/
     --colour-main-dark:hsla(308, 100%, 39%, 1);
     --colour-accent-dark:hsla(264, 100%, 95%, 1);
-    --colour-background-dark:hsla(264, 100%, 10%, 1);
+    --colour-background-dark:hsla(264, 100%, 14%, 1);
     --colour-text-dark:hsl(0, 0%, 100%);
     --colour-text-accent-dark:hsl(0, 0%, 0%);
 }
@@ -29,9 +29,26 @@
         --colour-accent:var(--colour-accent-light);
         --colour-background:var(--colour-background-light);
         --colour-text:var(--colour-text-light);
-        --colour-text-accent:var(--colour-text-accent-light)
+        --colour-text-accent:var(--colour-text-accent-light);
 
     }   
+}
+
+[color-scheme="light"]{
+    --colour-main:var(--colour-main-light);
+    --colour-accent:var(--colour-accent-light);
+    --colour-background:var(--colour-background-light);
+    --colour-text:var(--colour-text-light);
+    --colour-text-accent:var(--colour-text-accent-light);
+
+}
+[color-scheme="dark"]{
+    --colour-main:var(--colour-main-dark);
+    --colour-accent:var(--colour-accent-dark);
+    --colour-background:var(--colour-background-dark);
+    --colour-text:var(--colour-text-dark);
+    --colour-text-accent:var(--colour-text-accent-dark);
+
 }
 
 *{
@@ -43,15 +60,29 @@
 
 }
 
+.theme svg{
+    position: fixed;
+    z-index:2;
+    left:4vw;
+    top:10px;
+    width:2rem;
+    height:2rem;
+    cursor: pointer;
+}
+
+
 
 .logo{
     margin:0;
     padding:0;
-    height:30vh;
+    height:20vh;
     max-height: 350px;
     display: flex;
     flex-direction: row;
     background: var(--colour-background);
+}
+.logoSvg{
+    height:20vh;
 }
 .title{
     display: flex;
@@ -70,7 +101,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding:0;
+    padding:0.2rem;
     color: var(--colour-main);
     }
 h1{ 
@@ -101,45 +132,37 @@ h1{
     text-align: center;
     padding:25px;
     height:100vh;
-    width: 100vw;
 }
 
 .nav{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding:1rem;
-    margin:1rem;
+    padding:0.5em;
+    margin:1em;
 
     background:var(--colour-accent);
-    box-shadow:5px 5px 15px var(--colour-accent-light);
-
     color:var(--colour-text-accent);
+
     font-size: 1.6rem;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: 700;
     letter-spacing: 0.6rem;
-    width:40vw;
+
     overflow: hidden;
-    border-radius: 200px;
+    border-radius: 15px;
 }
 .serviceList{
+    position:relative;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 .serviceList > *{
-    display: flex;
-    justify-content: center;
-    border-radius: 1000px;
-    box-shadow:10px 10px 15px var(--colour-accent);
-    padding:1.5rem;
+    border-radius: 20px;
+    border:3px solid var(--colour-text);  
+    padding:1rem;
     margin:1rem;
     color:var(--colour-text);
     font-size: 1.3rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 700;
-    width:90vw;
 }
 
 
@@ -158,6 +181,7 @@ h1{
     width: 100vw;
     height:15vh;
     background: var(--colour-background);
+    
 
 }
 .address{
@@ -191,7 +215,7 @@ h1{
         height:100vh;
         max-height: 1000px;
     }
-    svg{
+    .logoSvg{
         width: 100vw;
         height:90vh;
     }
@@ -206,19 +230,14 @@ h1{
         padding:0;
         flex-direction: column;
         justify-content: center;
-        height:100vh;
+        height:80vh;
     }
     .nav{
         position: absolute;
-        top:80px;
+        top:60px;
         display: flex;
         justify-content: center;
-        width:90vw;
-        margin-top:10px;
-        margin-bottom:10px;
-        margin-left: 5vw;
-        margin-right:5vw;
-        box-shadow:8px 6px 8px #CBADD3;
+        margin:5vw;
     }
     .footer{
         height:15vh;
@@ -230,7 +249,7 @@ h1{
 }
 
 
-/* SVG Logo styles */
+/* SVG Logo styling and animations */
 
 /*Spine color*/
 .cervical,
@@ -286,9 +305,6 @@ h1{
 @keyframes center {
     0%    { transform: translate(0px);} 
     100%   {transform: translate(1%, -1%);}}
-
-    
-
 .lumbar{
     position: relative;
     animation: lumbar 3000ms 350ms ease-in-out infinite alternate;

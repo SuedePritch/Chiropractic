@@ -51,7 +51,9 @@
 
 }
 
-*{
+*,
+*::before,
+*::after{
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -63,20 +65,20 @@
 .theme svg{
     position: fixed;
     z-index:2;
-    left:4vw;
-    top:10px;
+    right:4vw;
+    top:40px;
     width:2rem;
     height:2rem;
     cursor: pointer;
 }
 
 
-
 .logo{
+    
     margin:0;
     padding:0;
     height:20vh;
-    max-height: 350px;
+    max-height: 500px;
     display: flex;
     flex-direction: row;
     background: var(--colour-background);
@@ -87,10 +89,9 @@
 .title{
     display: flex;
     flex-direction: row;
-    top:0;
     width: 100vw;
     z-index: 2;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 .superior{
     display: flex;
@@ -113,16 +114,8 @@ h1{
 
 .page{
     background: var(--colour-background);
+    
 }
-
-
-
-
-
-
-
-
-
 
 
 .main{
@@ -134,36 +127,22 @@ h1{
     height:100vh;
 }
 
-.nav{
-    padding:0.5em;
-    margin:1em;
-
+h2{
+    text-align: center;
+    padding:1rem 1.5rem;
+    width:fit-content;
     background:var(--colour-accent);
     color:var(--colour-text-accent);
 
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: 700;
     letter-spacing: 0.6rem;
 
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 0.25rem;
 }
-.serviceList{
-    position:relative;
-    display: flex;
-    flex-direction: column;
-}
-.serviceList > *{
-    border-radius: 20px;
-    border:3px solid var(--colour-text);  
-    padding:1rem;
-    margin:1rem;
-    color:var(--colour-text);
-    font-size: 1.3rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 700;
-}
+
 
 
 
@@ -209,6 +188,9 @@ h1{
     .page{
         scroll-snap-align: start;
     }
+    .theme svg{
+        top:10px;
+    }
 
     .logo{
         flex-direction: column;
@@ -216,23 +198,26 @@ h1{
         max-height: 1000px;
     }
     .logoSvg{
+        position: relative;
+        top:5vh;
         width: 100vw;
-        height:90vh;
+        height:75vh;
     }
     .title{
         position: fixed;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         padding-top: 0.5rem;
+        padding-left:5vw;
         font-size: 1rem;
     }
     .main{
         padding:0;
         flex-direction: column;
         justify-content: center;
-        height:80vh;
+        height:100vh;
     }
-    .nav{
+    h2{
         position: absolute;
         top:60px;
         display: flex;
